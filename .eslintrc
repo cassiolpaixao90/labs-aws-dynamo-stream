@@ -1,0 +1,18 @@
+{
+	"extends": ["standard-typescript-prettier"],
+	"plugins": ["prettier"],
+	"rules": {
+		"prettier/prettier": "error",
+		"@typescript-eslint/no-var-requires": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"no-self-assign": "off",
+		"no-useless-constructor": "off"
+	},
+	"globals": {
+		"root": true
+	},
+	"env": {
+		"es2020": true,
+		"node": true
+	}
+}
