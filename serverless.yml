@@ -45,22 +45,22 @@ resources:
 
 functions:
   hero-insert:
-    handler: index.handler
+    handler: src/functions/heros/insert/index.handler
     events:
       - http:
-          path: heroes
+          path: heros
           method: post
           cors: true
 
-  hero-trigger:
-    handler: index.handler
-    events:
-      - stream:
-          type: dynamodb
-          arn:
-            Fn::GetAtt:
-              - HeroesTable
-              - StreamArn
+  # hero-trigger:
+  #   handler: src/triggers/heros/index.handler
+  #   events:
+  #     - stream:
+  #         type: dynamodb
+  #         arn:
+  #           Fn::GetAtt:
+  #             - HeroesTable
+  #             - StreamArn
 
 custom:
   webpack:

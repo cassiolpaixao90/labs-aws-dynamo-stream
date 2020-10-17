@@ -1,16 +1,15 @@
 import { BadRequestException } from '../errors';
 
-export const adapterValidator = ({ schema, key }) => ({
-	before: async (handler, next) => {
+export const adapterValidator = ({ schema }) => ({
+	before: async (handler) => {
 		try {
 			if (!schema) {
-				return next();
+				return Promise.resolve();
 			}
 
-			const value = handler.event[key];
-			await schema.validate(value, { abortEarly: false });
+			await schema.validate(handler.event, { abortEarly: false });
 
-			return next();
+			return Promise.resolve();
 		} catch (err) {
 			throw new BadRequestException({ message: err.name, details: err.errors });
 		}
