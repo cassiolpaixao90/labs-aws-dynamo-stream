@@ -1,9 +1,9 @@
-class HerosDomain {
+class Domain {
 	readonly name: string;
 	readonly power: string;
 
 	constructor(payload) {
-		Object.assign(this, payload);
+		Object.freeze(Object.assign(this, payload));
 	}
 
 	toDatabase() {
@@ -14,4 +14,4 @@ class HerosDomain {
 	}
 }
 
-export default HerosDomain;
+export default Domain;

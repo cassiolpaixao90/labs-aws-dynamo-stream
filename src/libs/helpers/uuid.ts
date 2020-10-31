@@ -1,11 +1,11 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuid4 } from 'uuid';
 
 export interface UUIDGenerator {
-	uuidv4();
+	uuid4();
 }
 
 export class UUIDGeneratorAdapter implements UUIDGenerator {
-	uuidv4() {
-		return uuidv4();
+	uuid4() {
+		return uuid4();
 	}
 }

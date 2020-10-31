@@ -45,15 +45,15 @@ resources:
 
 functions:
   hero-insert:
-    handler: src/functions/heros/insert/index.handler
+    handler: src/functions/heroes/insert/index.handler
     events:
       - http:
-          path: heros
+          path: heroes
           method: post
           cors: true
 
   # hero-trigger:
-  #   handler: src/triggers/heros/index.handler
+  #   handler: src/triggers/heroes/index.handler
   #   events:
   #     - stream:
   #         type: dynamodb

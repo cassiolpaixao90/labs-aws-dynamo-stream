@@ -3,7 +3,6 @@ class LambdaException extends Error {
 
 	constructor({ type, message, details }) {
 		super();
-		Error.captureStackTrace(this, this.constructor);
 		this.name = this.constructor.name;
 		this.type = type;
 		this.message = message;
