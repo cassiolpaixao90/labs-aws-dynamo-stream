@@ -1,5 +1,5 @@
 {
-	"name": "labs-aws-dynamo-streams",
+	"name": "labs-serverless-dynamo-streams",
 	"version": "1.0.0",
 	"description": "Sample app serverless-aws to save data in dynamodb with trigger",
 	"scripts": {
